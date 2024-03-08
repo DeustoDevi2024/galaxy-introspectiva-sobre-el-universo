@@ -17,3 +17,5 @@ También tendremos otros objetos de menor importancia como anillos de asteroides
 ![Diagrama del sistema solar](diagrama.png)
 
 ## Diagrama de clases
+
+![Diagrama de clases](diagramaDeClases.png)
