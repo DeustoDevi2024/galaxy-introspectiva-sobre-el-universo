@@ -6,42 +6,19 @@ using UnityEngine;
 public class Cuerpo : MonoBehaviour
 {
 
-    [SerializeField] protected Cuerpo center;
-    [SerializeField] protected float orbitalPeriod;
-    [SerializeField] protected Vector3 axis = Vector3.up;
-    protected float angularSpeed;
+    [SerializeField] protected int rotationPeriod;
+    protected int rotationAngularSpeed;
 
-    public Cuerpo(Cuerpo center, float orbitalPeriod, Vector3 axis)
+    public Cuerpo() { }
+
+    public Cuerpo(int rotationPeriod)
     {
-        this.center = center;
-        this.orbitalPeriod = orbitalPeriod;
-        this.axis = axis;
-        this.angularSpeed = (2 * Mathf.PI) / (orbitalPeriod / 1000000);
+        this.rotationPeriod = rotationPeriod;
+        calculateRotationAngularSpeed();
     }
 
-    public virtual void Rotate()
+    protected void calculateRotationAngularSpeed()
     {
-        if (center != null)
-        {
-            Debug.Log("Hola");
-            transform.RotateAround(center.transform.position, axis, angularSpeed);
-        }
         
-    }
-
-    protected virtual void Start()
-    {
-        calculateAngularSpeed();
-    }
-
-    protected virtual void Update()
-    {
-        Rotate();
-        //Debug.Log("Hola");
-    }
-
-    protected void calculateAngularSpeed()
-    {
-        angularSpeed = (2 * Mathf.PI) / (orbitalPeriod / 1000000);
     }
 }
