@@ -22,15 +22,14 @@ public class Planeta : Cuerpo
         this.center = center;
         this.orbitalPeriod = orbitalPeriod;
         this.axis = axis;
-        this.angularSpeed = (2 * Mathf.PI) / (orbitalPeriod / 1000000);
+        calculateAngularSpeed();
     }
 
     public virtual void Rotate()
     {
         if (center != null)
         {
-            Debug.Log("Hola");
-            transform.RotateAround(center.transform.position, axis, angularSpeed);
+            transform.RotateAround(center.transform.position, axis, angularSpeed * Time.deltaTime);
         }
 
     }
@@ -43,7 +42,7 @@ public class Planeta : Cuerpo
     protected virtual void Update()
     {
         Rotate();
-        //Debug.Log("Hola");
+        RotateAroundSelf();
     }
 
     protected void calculateAngularSpeed()
