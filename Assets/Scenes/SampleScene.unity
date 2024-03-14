@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 150000, guid: c9df427deb000b548ba87af31d666589, type: 3}
       propertyPath: m_Name
-      value: Planet_E
+      value: Mars
       objectReference: {fileID: 0}
     - target: {fileID: 492902, guid: c9df427deb000b548ba87af31d666589, type: 3}
       propertyPath: m_LocalScale.x
@@ -725,7 +725,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 402416, guid: 7e606bbd20845a246b693fca327ac9c5, type: 3}
   m_PrefabInstance: {fileID: 1415452468}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1412196693
+--- !u!114 &1412196696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -734,10 +734,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1412196689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 713cf5c9d15dc1f4fb541d042fd9fb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 760eab4a6f3310544bd11e2e4eca7be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  period: 7599744
+  rotationPeriod: 0.5
+  center: {fileID: 1547530825}
+  orbitalPeriod: 1000000
+  axis: {x: 0, y: 1, z: 0}
 --- !u!1001 &1415452468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -780,15 +783,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 402416, guid: 7e606bbd20845a246b693fca327ac9c5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 402416, guid: 7e606bbd20845a246b693fca327ac9c5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 402416, guid: 7e606bbd20845a246b693fca327ac9c5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 402416, guid: 7e606bbd20845a246b693fca327ac9c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -811,7 +814,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 109314, guid: 7e606bbd20845a246b693fca327ac9c5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1412196693}
+      addedObject: {fileID: 1412196696}
   m_SourcePrefab: {fileID: 100100000, guid: 7e606bbd20845a246b693fca327ac9c5, type: 3}
 --- !u!1 &1455304817
 GameObject:
@@ -1219,6 +1222,27 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!1 &1843704747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 151998, guid: 39c9a4332495ee04b8a6fb43b2a2f304, type: 3}
+  m_PrefabInstance: {fileID: 260724218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1843704748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843704747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760eab4a6f3310544bd11e2e4eca7be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationPeriod: 0
+  center: {fileID: 1547530825}
+  orbitalPeriod: 1000000
+  axis: {x: 0, y: 1, z: 0}
 --- !u!1 &1947027883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,10 +1513,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2079274938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7625d9b29cde6fb4abd34565d43c7cca, type: 3}
+  m_Script: {fileID: 11500000, guid: 760eab4a6f3310544bd11e2e4eca7be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationPeriod: 0
+  rotationPeriod: 0.5
+  center: {fileID: 1547530825}
+  orbitalPeriod: 10000000
+  axis: {x: 0, y: 1, z: 0}
 --- !u!1001 &2106262448
 PrefabInstance:
   m_ObjectHideFlags: 0
