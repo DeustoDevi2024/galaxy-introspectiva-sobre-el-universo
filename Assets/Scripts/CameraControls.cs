@@ -31,8 +31,8 @@ public class CameraControls : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            //transform.Rotate(Vector3.up, Input.GetAxis("Mouse X"));
-            //transform.Rotate(Vector3.left, Input.GetAxis("Mouse Y"));
+            transform.Rotate(Vector3.up, Input.GetAxis("Mouse X"));
+            transform.Rotate(Vector3.left, Input.GetAxis("Mouse Y"));
             //transform.rotation = Quaternion.Euler(transform.r)
         }
         if (Input.GetKeyDown(KeyCode.Q))

@@ -35,7 +35,7 @@ public class Planeta : Cuerpo
         {
             transform.RotateAround(center.transform.position, axis, angularSpeed * Time.deltaTime);
             //Debug.Log("Hola");
-            transform.RotateAround(center.transform.position, axis, angularSpeed);
+            //transform.RotateAround(center.transform.position, axis, angularSpeed);
         }
 
     }

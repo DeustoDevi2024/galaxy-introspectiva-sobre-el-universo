@@ -8,6 +8,7 @@ public class Cuerpo : MonoBehaviour
 
     [SerializeField] protected float rotationPeriod;
     protected float rotationAngularSpeed;
+    [SerializeField] protected GameObject realBody;
 
 
     public Cuerpo() { }
@@ -22,7 +23,7 @@ public class Cuerpo : MonoBehaviour
         if(rotationPeriod != 0)
         {
             rotationAngularSpeed = (2 * Mathf.PI) / rotationPeriod;
-            transform.localRotation *= Quaternion.Euler(0, 1 * rotationAngularSpeed * Time.deltaTime, 0);
+            realBody.transform.localRotation *= Quaternion.Euler(0, 1 * rotationAngularSpeed * Time.deltaTime, 0);
         }
     }
 }
