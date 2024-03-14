@@ -5,9 +5,13 @@ using UnityEngine;
 public class Planeta : Cuerpo
 {
     [SerializeField] protected Cuerpo center;
-    [SerializeField] protected float orbitalPeriod;
-    [SerializeField] protected Vector3 axis = Vector3.up;
+    [SerializeField] private float orbitalPeriod;
+    [SerializeField] private Vector3 axis = Vector3.up;
     protected float angularSpeed;
+
+    public Cuerpo Center { get => center; set => center = value; }
+    public float OrbitalPeriod { get => orbitalPeriod; set => orbitalPeriod = value; }
+    public Vector3 Axis { get => axis; set => axis = value; }
 
     public Planeta()
     {
@@ -30,6 +34,8 @@ public class Planeta : Cuerpo
         if (center != null)
         {
             transform.RotateAround(center.transform.position, axis, angularSpeed * Time.deltaTime);
+            //Debug.Log("Hola");
+            transform.RotateAround(center.transform.position, axis, angularSpeed);
         }
 
     }
