@@ -6,6 +6,7 @@ public class CameraControls : MonoBehaviour
 {
 
     public int speed;
+    public GameObject[] gameObjects;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,23 @@ public class CameraControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             transform.rotation = Quaternion.identity;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (gameObjects[0].GetComponent<TrailRenderer>().emitting)
+            {
+                foreach (GameObject gameObject in gameObjects)
+                {
+                    gameObject.GetComponent<TrailRenderer>().emitting = false;
+                }
+            } else
+            {
+                foreach (GameObject gameObject in gameObjects)
+                {
+                    gameObject.GetComponent<TrailRenderer>().emitting = true;
+                }
+            }
+            
         }
     }
 }
